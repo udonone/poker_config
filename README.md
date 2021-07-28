@@ -9,5 +9,22 @@
   * 调用Deposit方法前，要先对币种approve
   * 前端主要是调用Deposit\Withdraw\WithdrawAll 三个业务方法，来实现存取
   * 暂时支持的是BUSD和USDC，它们的pid分别为0和1
-  * Seed Token会在每次Withdraw时发放
+  * Seed Token会在每次投出、赎回时发放
 
+* 前端显示使用到的接口
+  * farm.userInfo[pid][user address]
+    * [0] shares
+    * [1] rewardDebt (已发放的奖励)
+    * [2] 在投余额
+  * farm.poolInfo[pid]
+    * [0] 投的币种
+    * [1] 一般为100的倍数，用于Seed发放时的分配比例
+    * [2] accSeedPerShare
+    * [3] 策略机的地址
+    * [4] 池子的余额
+  * poolLength 有几个池子，pid从0开始
+  * totalAllocPoint 总的比例基数，其实等于每个池子的比例之合
+  * 用户每个池子的在投收益 = user.shares * pool.accSeedPerShare/(10**12)-user.rewardDebt
+
+* 服务端指定用户发放seed
+  * farm.sendSeed(address _to, uint256 _amount)

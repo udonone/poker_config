@@ -1,7 +1,7 @@
 {
   "Contracts": {
-    "SeedToken": "0x06266F809049A6418cAF9fb787121b86ABAc2B75",
-    "SeedFarm": "0x6e061E137cCa2b170779104B06A664Bb3f2f1A86",
+    "SeedToken": "0x0da4D307e21581dbDED72843496aa5BAC786b009",
+    "SeedFarm": "0x19e51F5081DC115F88b031c25D35021E598ECC9c",
     "USDC": "0x16227D60f7a0e586C66B005219dfc887D13C9531",
     "BUSD": "0x8301F2213c0eeD49a7E28Ae4c3e91722919B8B47"
   },
@@ -10,7 +10,7 @@
       "name": "Seed Token",
       "symbol": "SeedT",
       "decimals": 18,
-      "address": "0x06266F809049A6418cAF9fb787121b86ABAc2B75"
+      "address": "0x0da4D307e21581dbDED72843496aa5BAC786b009"
     },
     "USDC": {
       "name": "USD Coin",
